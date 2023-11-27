@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCxuq0CIxFgasd13qF3HcPHY7Cj6ER7qkQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>389127631393</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.imk.indonesia-keyboard</string>
+	<key>PROJECT_ID</key>
+	<string>indonesiakeyboard-d6101</string>
+	<key>STORAGE_BUCKET</key>
+	<string>indonesiakeyboard-d6101.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:389127631393:ios:f1ed353ae66f855b6ee960</string>
+</dict>
+</plist>
