@@ -3,4 +3,70 @@
    uuid = "EDFF6C5A-A536-4982-B385-9C4ADA0729FD"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CBE8F5E-4DBF-48FC-9E7E-8EB5BCA88AB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "indonesia-keyboard/SurveyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "doneAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DDD12EA-AD2E-4613-86BE-9F5E77252412"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "indonesia-keyboard/SurveyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "checkIfAllChecked()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5DDD12EA-AD2E-4613-86BE-9F5E77252412 - 3bd6d64d8c366f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "indonesia_keyboard.SurveyViewController.checkIfAllChecked() -&gt; ()"
+                  moduleName = "indonesia-keyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kurniadi/Documents/Study/IMK/indonesia-keyboard/indonesia-keyboard/SurveyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "5DDD12EA-AD2E-4613-86BE-9F5E77252412 - 3bd6d64d8c366f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "indonesia_keyboard.SurveyViewController.checkIfAllChecked() -&gt; ()"
+                  moduleName = "indonesia-keyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kurniadi/Documents/Study/IMK/indonesia-keyboard/indonesia-keyboard/SurveyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

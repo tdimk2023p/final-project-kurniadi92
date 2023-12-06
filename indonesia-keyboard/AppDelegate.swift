@@ -16,6 +16,7 @@ class TempStorage {
     var qwertyTracked = ""
     var proposedTracked = ""
     var colemakTracked = ""
+    var surveyResult = ""
     
     static let shared = TempStorage()
     
@@ -26,7 +27,8 @@ class TempStorage {
             "colemakTracked": colemakTracked,
             "age": age,
             "sex": sex,
-            "fluently": fluently
+            "fluently": fluently,
+            "surveyResult": surveyResult
         ]
     }
 }

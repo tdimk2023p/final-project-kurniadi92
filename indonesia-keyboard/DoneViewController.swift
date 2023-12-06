@@ -15,9 +15,8 @@ class DoneViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func backToHome(_ sender: Any) {
-        
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
     
     /*

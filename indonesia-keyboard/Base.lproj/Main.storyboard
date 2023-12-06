@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c9a-HV-kfc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz0-AZ-dYG">
                                 <rect key="frame" x="24" y="381" width="345" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,7 +46,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-A9-LHT">
                                 <rect key="frame" x="24" y="394" width="345" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wwq-NJ-hFB">
@@ -112,7 +113,7 @@
                                             <constraint firstAttribute="height" constant="48" id="jB9-EA-mfA"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Age / Umur Anda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-vU-PXk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umur Anda / Your Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-vU-PXk">
                                         <rect key="frame" x="0.0" y="81.666666666666657" width="369" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="e48-Ye-2kH"/>
@@ -131,6 +132,9 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="c9a-HV-kfc" id="4jP-6j-2wc"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NF8-yA-qBt">
                                         <rect key="frame" x="0.0" y="157.66666666666666" width="369" height="24"/>
@@ -140,7 +144,7 @@
                                             <constraint firstAttribute="height" constant="24" id="rl3-gc-w0z"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex / Jenis Kelamin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-rs-5a6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Kelamin / Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-rs-5a6">
                                         <rect key="frame" x="0.0" y="181.66666666666666" width="369" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="hGe-ko-BBy"/>
@@ -159,6 +163,9 @@
                                             <segment title="Woman / Wanita"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="sexSelectionChanged:" destination="c9a-HV-kfc" eventType="valueChanged" id="Pm5-U3-cbR"/>
+                                        </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilA-QM-urQ">
                                         <rect key="frame" x="0.0" y="253.66666666666669" width="369" height="24"/>
@@ -167,7 +174,7 @@
                                             <constraint firstAttribute="height" constant="24" id="MMc-KV-rP4"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can use QWERTY Keyboard Fluently ? / Fasih dengan keyboard QWERTY ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlW-XF-Fpo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fasih dengan keyboard standard / Can use QWERTY standard Keyboard Fluently ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlW-XF-Fpo">
                                         <rect key="frame" x="0.0" y="277.66666666666669" width="369" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="wYC-22-ivW"/>
@@ -186,6 +193,9 @@
                                             <segment title="No / Tidak"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="qwertySelectionChanged:" destination="c9a-HV-kfc" eventType="valueChanged" id="GGh-Dk-hBf"/>
+                                        </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqI-w8-Vuo">
                                         <rect key="frame" x="0.0" y="385.66666666666669" width="369" height="24"/>
@@ -194,7 +204,7 @@
                                             <constraint firstAttribute="height" constant="24" id="Slb-7i-Zbl"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0Y-hO-6F6">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0Y-hO-6F6">
                                         <rect key="frame" x="0.0" y="409.66666666666669" width="369" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="5fP-3z-lRc"/>
@@ -227,11 +237,140 @@
                         <outlet property="ageTextField" destination="CB2-1X-GcL" id="v1q-l7-G15"/>
                         <outlet property="fluentSegmented" destination="ngk-qJ-nKZ" id="DC1-3w-Q96"/>
                         <outlet property="sexSegmented" destination="fhD-lZ-ty4" id="3wf-A5-MEd"/>
+                        <outlet property="startButton" destination="l0Y-hO-6F6" id="KUb-Qc-5Tb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhm-cC-AvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950" y="4"/>
+        </scene>
+        <!--Survey View Controller-->
+        <scene sceneID="PiL-Ty-6gC">
+            <objects>
+                <viewController storyboardIdentifier="SurveyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vy5-P8-w9l" customClass="SurveyViewController" customModule="indonesia_keyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ThN-QH-Wui">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-33-4dN">
+                                <rect key="frame" x="0.0" y="191" width="393" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3xF-ZD-aBH">
+                                    <rect key="frame" x="0.0" y="167" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Kirim response saya / Send my response"/>
+                                    <connections>
+                                        <action selector="doneAction:" destination="Vy5-P8-w9l" eventType="touchUpInside" id="xI1-su-lL7"/>
+                                    </connections>
+                                </button>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="89" id="yRw-7c-Ev6" customClass="TableViewCell" customModule="indonesia_keyboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yRw-7c-Ev6" id="etX-Eh-hsf">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-jZ-9Kf">
+                                                    <rect key="frame" x="12" y="6" width="369" height="77"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-03-JbE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="369" height="35"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3gx-14-d09">
+                                                            <rect key="frame" x="0.0" y="41" width="369" height="37"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="mEv-Zy-hiz"/>
+                                                            </constraints>
+                                                            <segments>
+                                                                <segment title="1"/>
+                                                                <segment title="2"/>
+                                                                <segment title="3"/>
+                                                                <segment title="4"/>
+                                                                <segment title="5"/>
+                                                            </segments>
+                                                            <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
+                                                            <connections>
+                                                                <action selector="selectionChanged:" destination="yRw-7c-Ev6" eventType="valueChanged" id="y5E-3Y-1LU"/>
+                                                            </connections>
+                                                        </segmentedControl>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wbe-jZ-9Kf" firstAttribute="leading" secondItem="etX-Eh-hsf" secondAttribute="leading" constant="12" id="9K6-2U-D8f"/>
+                                                <constraint firstItem="Wbe-jZ-9Kf" firstAttribute="top" secondItem="etX-Eh-hsf" secondAttribute="top" constant="6" id="MND-Qy-dBo"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wbe-jZ-9Kf" secondAttribute="trailing" constant="12" id="R1Q-bV-blw"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wbe-jZ-9Kf" secondAttribute="bottom" constant="6" id="su4-ge-VfY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="S2e-03-JbE" id="KhS-Q4-j4U"/>
+                                            <outlet property="selectionSegmented" destination="3gx-14-d09" id="YQu-WM-g1c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vy5-P8-w9l" id="uKn-uy-8cN"/>
+                                    <outlet property="delegate" destination="Vy5-P8-w9l" id="JeV-GC-316"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-HI-upQ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPl-vc-MnY">
+                                        <rect key="frame" x="12" y="0.0" width="369" height="120"/>
+                                        <string key="text">1. Strongly Disagree / Sangat Tidak Setuju
+2. Disagree / Tidak setuju
+3. Netral 
+4. Agree / Setuju
+5. Strongly Agree / Sangat Setuju</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="KPl-vc-MnY" firstAttribute="top" secondItem="3V3-HI-upQ" secondAttribute="top" id="Nby-1G-U4l"/>
+                                    <constraint firstAttribute="height" constant="120" id="l2x-Nu-3Xs"/>
+                                    <constraint firstItem="KPl-vc-MnY" firstAttribute="leading" secondItem="3V3-HI-upQ" secondAttribute="leading" constant="12" id="oDb-w1-RxT"/>
+                                    <constraint firstAttribute="bottom" secondItem="KPl-vc-MnY" secondAttribute="bottom" id="sF2-HS-mO0"/>
+                                    <constraint firstAttribute="trailing" secondItem="KPl-vc-MnY" secondAttribute="trailing" constant="12" id="tsZ-Xk-3wx"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="amv-ir-0vC">
+                                <rect key="frame" x="186" y="416" width="20" height="20"/>
+                                <color key="color" systemColor="labelColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XHV-t7-Ir6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g4g-33-4dN" firstAttribute="leading" secondItem="XHV-t7-Ir6" secondAttribute="leading" id="6m8-rP-ANf"/>
+                            <constraint firstItem="amv-ir-0vC" firstAttribute="centerX" secondItem="g4g-33-4dN" secondAttribute="centerX" id="8mn-Qr-w1a"/>
+                            <constraint firstItem="g4g-33-4dN" firstAttribute="top" secondItem="3V3-HI-upQ" secondAttribute="bottom" constant="12" id="OYF-dH-hVN"/>
+                            <constraint firstItem="XHV-t7-Ir6" firstAttribute="bottom" secondItem="g4g-33-4dN" secondAttribute="bottom" id="QHk-CV-i7q"/>
+                            <constraint firstItem="XHV-t7-Ir6" firstAttribute="trailing" secondItem="g4g-33-4dN" secondAttribute="trailing" id="RWc-EF-65t"/>
+                            <constraint firstItem="amv-ir-0vC" firstAttribute="centerY" secondItem="g4g-33-4dN" secondAttribute="centerY" id="RsK-2h-nav"/>
+                            <constraint firstItem="3V3-HI-upQ" firstAttribute="top" secondItem="XHV-t7-Ir6" secondAttribute="top" id="Tbn-dA-7Gb"/>
+                            <constraint firstItem="3V3-HI-upQ" firstAttribute="leading" secondItem="XHV-t7-Ir6" secondAttribute="leading" id="X2e-9a-sKn"/>
+                            <constraint firstItem="XHV-t7-Ir6" firstAttribute="trailing" secondItem="3V3-HI-upQ" secondAttribute="trailing" id="aYN-fE-FGs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="3xF-ZD-aBH" id="cKL-yr-siv"/>
+                        <outlet property="loadingIndicator" destination="amv-ir-0vC" id="4KC-QH-0TZ"/>
+                        <outlet property="tableView" destination="g4g-33-4dN" id="Yuv-YE-uUL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UK3-90-Y5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727.4809160305342" y="3.5211267605633805"/>
         </scene>
         <!--Done View Controller-->
         <scene sceneID="w9k-Yk-fZD">
@@ -282,11 +421,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvb-LL-GAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="4"/>
+            <point key="canvasLocation" x="2454" y="4"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

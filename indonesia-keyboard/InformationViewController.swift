@@ -7,16 +7,47 @@
 
 import UIKit
 
-class InformationViewController: UIViewController {
+class InformationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var sexSegmented: UISegmentedControl!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var fluentSegmented: UISegmentedControl!
     
+    @IBOutlet weak var startButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        ageTextField.addTarget(self, action: #selector(InformationViewController.textFieldDidChange(_:)),
+                                  for: .editingChanged)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        check()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        sexSegmented.selectedSegmentIndex = -1
+        fluentSegmented.selectedSegmentIndex = -1
+        ageTextField.text = ""
+        check()
+    }
+    
+    private func check() {
+        startButton.isEnabled = (
+            sexSegmented.selectedSegmentIndex != -1 &&
+            fluentSegmented.selectedSegmentIndex != -1 &&
+            (ageTextField.text ?? "").isEmpty == false
+        )
+    }
+    
+    @IBAction func sexSelectionChanged(_ sender: Any) {
+        check()
+    }
+    
+    @IBAction func qwertySelectionChanged(_ sender: Any) {
+        check()
     }
     
     @IBAction func startAction(_ sender: Any) {
@@ -29,9 +60,13 @@ class InformationViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .overFullScreen
         vc.session = .test
-        vc.keyboardType = .qwerty
+        vc.keyboardType = .colemak
         
         self.present(vc, animated: true)
+        
+        ageTextField.text = ""
+        sexSegmented.selectedSegmentIndex = 0
+        fluentSegmented.selectedSegmentIndex = 0
     }
     
     /*

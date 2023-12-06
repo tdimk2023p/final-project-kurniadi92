@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import FirebaseCore
-import Firebase
 
 class ViewController: UIViewController {
     enum SessionType {
@@ -21,8 +19,8 @@ class ViewController: UIViewController {
        case colemak
     }
     
-    private let testText = "sy_mw_k_kntr_km_mngtrkn_brks"
-    private let trainText = "Nnt_sy_mmpr_k_tmpt_ftkp"
+    private let testText = "Nnt_sy_mmpr_k_tmpt_ftkp_dsn"
+    private let trainText = "Nnt_sy_mmpr_k_tmpt_ftkp_dsn"
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -199,15 +197,11 @@ class ViewController: UIViewController {
 //            }
             
             if keyboardType == .proposed {
-                let ref = Database.database().reference()
-                ref.child(TempStorage.shared.uuid).updateChildValues(TempStorage.shared.getDictionary()) { error, ref in
-                    if error == nil {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let vc = storyboard.instantiateViewController(withIdentifier: "DoneViewController") as! DoneViewController
-                        vc.modalPresentationStyle = .overFullScreen
-                        self.present(vc, animated: true)
-                    }
-                }
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "SurveyViewController") as! SurveyViewController
+                vc.modalPresentationStyle = .overFullScreen
+                
+                self.present(vc, animated: true)
             } else {
 //                if session == .test {
 //                    nextSession = .training
@@ -220,9 +214,9 @@ class ViewController: UIViewController {
 //                } else {
 //                    nextSession = .test
 //                }
-                if keyboardType == .qwerty {
-                    nextKeyboardType = .colemak
-                } else if keyboardType == .colemak {
+                if keyboardType == .colemak {
+                    nextKeyboardType = .qwerty
+                } else if keyboardType == .qwerty {
                     nextKeyboardType = .proposed
                 }
                 
